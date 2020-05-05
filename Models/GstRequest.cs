@@ -10,7 +10,7 @@ namespace GSTValidator.Models {
 		public string PractitionerName { get; set; }
 
 		[JsonProperty("stCd")]
-		public StateCodes StateCode { get; set; }
+		public string StateCode { get; set; }
 
 		[JsonProperty("dstCd")]
 		public string DistrictCode { get; set; }
@@ -21,7 +21,7 @@ namespace GSTValidator.Models {
 		public GstRequest(string _searchType, string _practitionerName, StateCodes _stateCode, string _districtCode, string _pinCode) {
 			SearchType = _searchType;
 			PractitionerName = _practitionerName;
-			StateCode = _stateCode;
+			StateCode = $"{(int) _stateCode:D2}";
 			DistrictCode = _districtCode;
 			PinCode = _pinCode;
 		}

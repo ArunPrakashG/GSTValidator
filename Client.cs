@@ -51,7 +51,7 @@ namespace GSTValidator {
 				if (string.IsNullOrEmpty(stateCodeString) || stateCodeString.Where(x => !char.IsDigit(x)).Count() > 0) {
 					Out("Entered value is invalid.");
 				}
-
+								
 				stateCode = (StateCodes) Enum.Parse(typeof(StateCodes), stateCodeString);
 				Out("Please wait... getting districts of the specified state...");
 				state = await CacheStateAsync(stateCode).ConfigureAwait(false);
