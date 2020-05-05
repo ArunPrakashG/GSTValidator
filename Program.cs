@@ -7,7 +7,8 @@ namespace GSTValidator {
 		private static readonly Logger Logger = new Logger("CORE");
 
 		private static async Task Main(string[] args) {
-			Logger.Info("Loading ...");
+			Console.ForegroundColor = ConsoleColor.White;
+			Console.Title = "GST Validator by SynergY";			
 			await Client.InitAsync().ConfigureAwait(false);
 			Logger.Info("Press any key to exit...");
 			Console.ReadKey(true);
