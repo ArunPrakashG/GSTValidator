@@ -17,7 +17,7 @@ namespace GSTValidator {
 
 				if (_debugEnabled) {
 					Console.ForegroundColor = ConsoleColor.DarkBlue;
-					Console.WriteLine("DEBUG mode is enabled!");					
+					Console.WriteLine("DEBUG mode is enabled!");
 				}
 				else {
 					Console.ForegroundColor = ConsoleColor.DarkBlue;
@@ -39,7 +39,7 @@ namespace GSTValidator {
 
 			if (!skipToFile) {
 				ToFile($"{methodName}() | ln {lineNumber} | INFO | {DateTime.Now.ToString()} [ {Identifier} ] {msg}");
-			}			
+			}
 		}
 
 		internal void Trace(string? msg, [CallerMemberName] string? methodName = null, [CallerLineNumber] int lineNumber = 0) {

@@ -1,12 +1,14 @@
 using System.Collections.Generic;
+using static GSTValidator.Enums;
 using static GSTValidator.Models.StateResponse;
 
 namespace GSTValidator.Models {
-	internal struct State {
-		internal readonly Client.StateCodes StateCode;
-		internal readonly List<District> Districts;
+	internal class State {
+		internal readonly StateCodes StateCode;
+		internal readonly List<Districts> Districts;
+		internal int DistrictsCount => Districts != null ? Districts.Count : 0;
 
-		internal State(Client.StateCodes _code, List<District> _districts) {
+		internal State(StateCodes _code, List<Districts> _districts) {
 			StateCode = _code;
 			Districts = _districts;
 		}

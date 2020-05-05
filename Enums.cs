@@ -1,0 +1,42 @@
+namespace GSTValidator {
+	public class Enums {
+		public enum StateCodes : int {
+			JammuKashmir = 01,
+			HimachalPradesh = 02,
+			Punjab = 03,
+			Chandigarh = 04,
+			Uttarakhand = 05,
+			Haryana = 06,
+			Delhi = 07,
+			Rajasthan = 08,
+			UttarPradesh = 09,
+			Bihar = 10,
+			Sikkim = 11,
+			ArunachalPradesh = 12,
+			Nagaland = 13,
+			Manipur = 14,
+			Mizoram = 15,
+			Tripura = 16,
+			Meghalaya = 17,
+			Assam = 18,
+			WestBengal = 19,
+			Jharkhand = 20,
+			Orissa = 21,
+			Chhattisgarh = 22,
+			MadhyaPradesh = 23,
+			Gujarat = 24,
+			DamanDiu = 25,
+			DadraNagarHaveli = 26,
+			Maharashtra = 27,
+			Karnataka = 29,
+			Goa = 30,
+			Lakshadweep = 31,
+			Kerala = 32,
+			TamilNadu = 33,
+			Puducherry = 34,
+			AndamanNicobarIslands = 35,
+			Telengana = 36,
+			AndhraPradesh = 37
+		}
+	}
+}

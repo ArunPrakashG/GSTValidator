@@ -1,56 +1,66 @@
 using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace GSTValidator.Models {
 	public class GstResponse {
-		[JsonProperty]
-		public Practitioner[] Root { get; set; }
-
 		public class Practitioner {
 			[JsonProperty("enrlNo")]
-			public string enrlNo { get; set; }
+			public string EnrolmentNumber { get; set; }
+
 			[JsonProperty("trpNam")]
-			public string trpNam { get; set; }
+			public string PractitionerName { get; set; }
+
 			[JsonProperty("stCd")]
-			public string stCd { get; set; }
+			public string StateCode { get; set; }
+
 			[JsonProperty("dstCd")]
-			public object dstCd { get; set; }
+			public string DistrictCode { get; set; }
+
 			[JsonProperty("pinCd")]
-			public object pinCd { get; set; }
+			public string PinCode { get; set; }
+
 			[JsonProperty("cntctNo")]
-			public string cntctNo { get; set; }
+			public string ContactNumber { get; set; }
+
 			[JsonProperty("emailId")]
-			public string emailId { get; set; }
+			public string EmailID { get; set; }
+
 			[JsonProperty("ctgry")]
-			public string ctgry { get; set; }
+			public string Catagory { get; set; }
+
 			[JsonProperty("adrs")]
-			public Adrs adrs { get; set; }
+			public Address Address { get; set; }
+
 			[JsonProperty("searchType")]
-			public object searchType { get; set; }
+			public string SearchType { get; set; }
+
 			[JsonProperty("authTokn")]
-			public object authTokn { get; set; }
+			public string AuthToken { get; set; }
 		}
 
-		public class Adrs {
+		public class Address {
 			[JsonProperty("bldNo")]
-			public string bldNo { get; set; }
-			[JsonProperty("fltNo")]
-			public string fltNo { get; set; }
-			[JsonProperty("bldName")]
-			public string bldName { get; set; }
-			[JsonProperty("road")]
-			public string road { get; set; }
-			[JsonProperty("locality")]
-			public string locality { get; set; }
-			[JsonProperty("district")]
-			public string district { get; set; }
-			[JsonProperty("pinCd")]
-			public string pinCd { get; set; }
-			[JsonProperty("addr")]
-			public string addr { get; set; }
-		}
+			public string BuildingNumber { get; set; }
 
+			[JsonProperty("fltNo")]
+			public string FlatNumber { get; set; }
+
+			[JsonProperty("bldName")]
+			public string BuildName { get; set; }
+
+			[JsonProperty("road")]
+			public string Road { get; set; }
+
+			[JsonProperty("locality")]
+			public string Locality { get; set; }
+
+			[JsonProperty("district")]
+			public string District { get; set; }
+
+			[JsonProperty("pinCd")]
+			public string PinCode { get; set; }
+
+			[JsonProperty("addr")]
+			public string FullAddress { get; set; }
+		}
 	}
 }
